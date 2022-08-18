@@ -1069,6 +1069,104 @@
     <span class="k">pass</span>
 
 
+<span class="k">def</span> <span class="fm">__rshift__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    ivy.Container special method for the right shift operator, calling </span>
+<span class="sd">    :code:`operator.rshift` for each of the corresponding leaves of the</span>
+<span class="sd">    two containers.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    self</span>
+<span class="sd">        first input container. Should have an integer data type.</span>
+<span class="sd">    other</span>
+<span class="sd">        second input array or container. Must be compatible with ``self`` </span>
+<span class="sd">        (see :ref:`broadcasting`). Should have an integer data type. </span>
+<span class="sd">        Each element must be greater than or equal to ``0``.</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    ret</span>
+<span class="sd">        a container containing the element-wise results. The returned array </span>
+<span class="sd">        must have a data type determined by :ref:`type-promotion`.</span>
+
+<span class="sd">    Examples</span>
+<span class="sd">    --------</span>
+<span class="sd">    With :code:`Number` instances at the leaves:</span>
+
+<span class="sd">    &gt;&gt;&gt; x = ivy.Container(a=128, b=43)</span>
+<span class="sd">    &gt;&gt;&gt; y = ivy.Container(a=5, b=3)</span>
+<span class="sd">    &gt;&gt;&gt; z = x &gt;&gt; y</span>
+<span class="sd">    &gt;&gt;&gt; print(z)</span>
+<span class="sd">    {</span>
+<span class="sd">        a: 4,</span>
+<span class="sd">        b: 5</span>
+<span class="sd">    }</span>
+
+<span class="sd">    With :code:`ivy.Array` instances at the leaves:</span>
+
+<span class="sd">    &gt;&gt;&gt; x = ivy.Container(a=ivy.array([16, 40, 120]),\</span>
+<span class="sd">                          b=ivy.array([15, 45, 143]))</span>
+<span class="sd">    &gt;&gt;&gt; y = ivy.Container(a=ivy.array([1, 2, 3]), \</span>
+<span class="sd">                          b=ivy.array([0, 3, 4]))</span>
+<span class="sd">    &gt;&gt;&gt; z = x &gt;&gt; y</span>
+<span class="sd">    &gt;&gt;&gt; print(z)</span>
+<span class="sd">    {</span>
+<span class="sd">        a: ivy.array([8, 10, 15]),</span>
+<span class="sd">        b: ivy.array([15, 5, 8])</span>
+<span class="sd">    }</span>
+
+<span class="sd">    With a mix of :code:`ivy.Container` and :code:`ivy.Array` instances:</span>
+
+<span class="sd">    &gt;&gt;&gt; x = ivy.Container(a=ivy.array([16, 40, 120]),\</span>
+<span class="sd">                          b=ivy.array([15, 45, 143]))</span>
+<span class="sd">    &gt;&gt;&gt; y = ivy.array([1, 2, 3])</span>
+<span class="sd">    &gt;&gt;&gt; z = x &gt;&gt; y</span>
+<span class="sd">    &gt;&gt;&gt; print(z)</span>
+<span class="sd">    {</span>
+<span class="sd">        a: ivy.array([8, 10, 15]),</span>
+<span class="sd">        b: ivy.array([7, 11, 17])</span>
+<span class="sd">    }</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">pass</span>
+
+
+<span class="k">def</span> <span class="fm">__rrshift__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    ivy.Container reverse special method for the right shift operator, calling</span>
+<span class="sd">    :code:`operator.rshift` for each of the corresponding leaves of the two</span>
+<span class="sd">    containers.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    self</span>
+<span class="sd">        first input container. Should have an integer data type.</span>
+<span class="sd">    other</span>
+<span class="sd">        second input array or container. Must be compatible with ``self``</span>
+<span class="sd">        (see :ref:`broadcasting`). Should have an integer data type. Each element</span>
+<span class="sd">        must be greater than or equal to ``0``.</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    ret</span>
+<span class="sd">        a container containing the element-wise results. The returned array</span>
+<span class="sd">        must have a data type determined by :ref:`type-promotion`.</span>
+
+<span class="sd">    Examples</span>
+<span class="sd">    --------</span>
+<span class="sd">    &gt;&gt;&gt; a = 64</span>
+<span class="sd">    &gt;&gt;&gt; b = ivy.Container(a = ivy.array([0, 1, 2]), \</span>
+<span class="sd">                          b = ivy.array([3, 4, 5]))</span>
+<span class="sd">    &gt;&gt;&gt; y = a &gt;&gt; b</span>
+<span class="sd">    &gt;&gt;&gt; print(y)</span>
+<span class="sd">    {</span>
+<span class="sd">        a: ivy.array([64, 32, 16]),</span>
+<span class="sd">        b: ivy.array([8, 4, 2])</span>
+<span class="sd">    }</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">pass</span>
+
+
 <span class="k">def</span> <span class="nf">__getstate__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
     <span class="k">pass</span>
 
@@ -4366,6 +4464,30 @@
 <span class="sd">        a container containing the element-wise results.</span>
 <span class="sd">        The returned container must have a data type determined</span>
 <span class="sd">        by :ref:`type-promotion`.</span>
+
+<span class="sd">    Examples</span>
+<span class="sd">    --------</span>
+<span class="sd">    With one :code:`ivy.Container` input:</span>
+
+<span class="sd">    &gt;&gt;&gt; a = ivy.Container(a = ivy.array([2, 3, 4]), b = ivy.array([5, 10, 64]))</span>
+<span class="sd">    &gt;&gt;&gt; b = ivy.array([0, 1, 2])</span>
+<span class="sd">    &gt;&gt;&gt; y = ivy.Container.static_bitwise_right_shift(a, b)</span>
+<span class="sd">    &gt;&gt;&gt; print(y)</span>
+<span class="sd">    {</span>
+<span class="sd">        a: ivy.array([2, 1, 1]),</span>
+<span class="sd">        b: ivy.array([5, 5, 16])</span>
+<span class="sd">    }</span>
+
+<span class="sd">    With multiple :code:`ivy.Container` inputs:</span>
+
+<span class="sd">    &gt;&gt;&gt; a = ivy.Container(a = ivy.array([2, 3, 4]), b = ivy.array([5, 10, 64]))</span>
+<span class="sd">    &gt;&gt;&gt; b = ivy.Container(a = ivy.array([0, 1, 2]), b = ivy.array([2]))</span>
+<span class="sd">    &gt;&gt;&gt; y = ivy.Container.static_bitwise_right_shift(a, b)</span>
+<span class="sd">    &gt;&gt;&gt; print(y)</span>
+<span class="sd">    {</span>
+<span class="sd">        a: ivy.array([2, 1, 1]),</span>
+<span class="sd">        b: ivy.array([1, 2, 16])</span>
+<span class="sd">    }</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="k">pass</span></div>
 
@@ -4413,6 +4535,17 @@
 <span class="sd">    ret</span>
 <span class="sd">        a container containing the element-wise results. The returned container</span>
 <span class="sd">        must have a data type determined by :ref:`type-promotion`.</span>
+
+<span class="sd">    Examples</span>
+<span class="sd">    --------</span>
+<span class="sd">    &gt;&gt;&gt; a = ivy.Container(a = ivy.array([2, 3, 4]), b = ivy.array([5, 10, 64]))</span>
+<span class="sd">    &gt;&gt;&gt; b = ivy.Container(a = ivy.array([0, 1, 2]), b = ivy.array([2]))</span>
+<span class="sd">    &gt;&gt;&gt; y = a.bitwise_right_shift(b)</span>
+<span class="sd">    &gt;&gt;&gt; print(y)</span>
+<span class="sd">    {</span>
+<span class="sd">        a: ivy.array([2, 1, 1]),</span>
+<span class="sd">        b: ivy.array([1, 2, 16])</span>
+<span class="sd">    }</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="k">pass</span></div>
 
