@@ -2,6 +2,33 @@ multi_head_attention
 ====================
 
 .. autofunction:: ivy.functional.ivy.layers.multi_head_attention
+
+.. autofunction:: ivy.array.array_methods.multi_head_attention
+
+.. autofunction:: ivy.container.container_methods.multi_head_attention
+
+.. autofunction:: ivy.container.container_methods.static_multi_head_attention
+
+.. list-table:: Device Support
+   :widths: 20 20 20 20 20
+   :header-rows: 1
+
+   * - Device
+     - JAX
+     - NumPy
+     - TensorFlow
+     - PyTorch
+   * - CPU
+     - ✅
+     - ✅
+     - ✅
+     - ✅
+   * - GPU
+     - ❌
+     - ❌
+     - ❌
+     - ❌
+
 |
 | **Supported Frameworks:**
 
@@ -21,3 +48,15 @@ multi_head_attention
 
 .. |numpy_logo| image:: ../../../logos/supported/numpy_logo.png
    :target: https://numpy.org
+
+
+.. toctree::
+   :hidden:
+   :maxdepth: -1
+   :caption: multi_head_attention
+
+   multi_head_attention/multi_head_attention_functional.rst
+   multi_head_attention/multi_head_attention_array.rst
+   multi_head_attention/multi_head_attention_container.rst
+   multi_head_attention/static_multi_head_attention_container.rst
+

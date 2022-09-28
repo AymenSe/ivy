@@ -2,6 +2,31 @@ max
 ===
 
 .. autofunction:: ivy.functional.ivy.statistical.max
+
+.. autofunction:: ivy.array.array_methods.max
+
+.. autofunction:: ivy.container.container_methods.max
+
+.. list-table:: Device Support
+   :widths: 20 20 20 20 20
+   :header-rows: 1
+
+   * - Device
+     - JAX
+     - NumPy
+     - TensorFlow
+     - PyTorch
+   * - CPU
+     - ✅
+     - ✅
+     - ✅
+     - ✅
+   * - GPU
+     - ❌
+     - ❌
+     - ❌
+     - ❌
+
 |
 | **Supported Frameworks:**
 
@@ -21,3 +46,14 @@ max
 
 .. |numpy_logo| image:: ../../../logos/supported/numpy_logo.png
    :target: https://numpy.org
+
+
+.. toctree::
+   :hidden:
+   :maxdepth: -1
+   :caption: max
+
+   max/max_functional.rst
+   max/max_array.rst
+   max/max_container.rst
+

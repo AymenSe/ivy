@@ -2,6 +2,29 @@ eigvalsh
 ========
 
 .. autofunction:: ivy.functional.ivy.linear_algebra.eigvalsh
+
+.. autofunction:: ivy.array.array_methods.eigvalsh
+
+.. list-table:: Device Support
+   :widths: 20 20 20 20 20
+   :header-rows: 1
+
+   * - Device
+     - JAX
+     - NumPy
+     - TensorFlow
+     - PyTorch
+   * - CPU
+     - ✅
+     - ✅
+     - ✅
+     - ✅
+   * - GPU
+     - ❌
+     - ❌
+     - ❌
+     - ❌
+
 |
 | **Supported Frameworks:**
 
@@ -21,3 +44,13 @@ eigvalsh
 
 .. |numpy_logo| image:: ../../../logos/supported/numpy_logo.png
    :target: https://numpy.org
+
+
+.. toctree::
+   :hidden:
+   :maxdepth: -1
+   :caption: eigvalsh
+
+   eigvalsh/eigvalsh_functional.rst
+   eigvalsh/eigvalsh_array.rst
+

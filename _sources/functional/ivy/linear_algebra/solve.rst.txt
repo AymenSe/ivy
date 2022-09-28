@@ -2,6 +2,33 @@ solve
 =====
 
 .. autofunction:: ivy.functional.ivy.linear_algebra.solve
+
+.. autofunction:: ivy.array.array_methods.solve
+
+.. autofunction:: ivy.container.container_methods.solve
+
+.. autofunction:: ivy.container.container_methods.static_solve
+
+.. list-table:: Device Support
+   :widths: 20 20 20 20 20
+   :header-rows: 1
+
+   * - Device
+     - JAX
+     - NumPy
+     - TensorFlow
+     - PyTorch
+   * - CPU
+     - ✅
+     - ✅
+     - ✅
+     - ✅
+   * - GPU
+     - ❌
+     - ❌
+     - ❌
+     - ❌
+
 |
 | **Supported Frameworks:**
 
@@ -21,3 +48,15 @@ solve
 
 .. |numpy_logo| image:: ../../../logos/supported/numpy_logo.png
    :target: https://numpy.org
+
+
+.. toctree::
+   :hidden:
+   :maxdepth: -1
+   :caption: solve
+
+   solve/solve_functional.rst
+   solve/solve_array.rst
+   solve/solve_container.rst
+   solve/static_solve_container.rst
+

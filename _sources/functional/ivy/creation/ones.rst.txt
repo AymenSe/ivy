@@ -2,6 +2,29 @@ ones
 ====
 
 .. autofunction:: ivy.functional.ivy.creation.ones
+
+.. autofunction:: ivy.container.container_methods.static_ones
+
+.. list-table:: Device Support
+   :widths: 20 20 20 20 20
+   :header-rows: 1
+
+   * - Device
+     - JAX
+     - NumPy
+     - TensorFlow
+     - PyTorch
+   * - CPU
+     - ✅
+     - ✅
+     - ✅
+     - ✅
+   * - GPU
+     - ❌
+     - ❌
+     - ❌
+     - ❌
+
 |
 | **Supported Frameworks:**
 
@@ -21,3 +44,13 @@ ones
 
 .. |numpy_logo| image:: ../../../logos/supported/numpy_logo.png
    :target: https://numpy.org
+
+
+.. toctree::
+   :hidden:
+   :maxdepth: -1
+   :caption: ones
+
+   ones/ones_functional.rst
+   ones/static_ones_container.rst
+

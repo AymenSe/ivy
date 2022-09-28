@@ -2,6 +2,33 @@ tensordot
 =========
 
 .. autofunction:: ivy.functional.ivy.linear_algebra.tensordot
+
+.. autofunction:: ivy.array.array_methods.tensordot
+
+.. autofunction:: ivy.container.container_methods.static_tensordot
+
+.. autofunction:: ivy.container.container_methods.tensordot
+
+.. list-table:: Device Support
+   :widths: 20 20 20 20 20
+   :header-rows: 1
+
+   * - Device
+     - JAX
+     - NumPy
+     - TensorFlow
+     - PyTorch
+   * - CPU
+     - ✅
+     - ✅
+     - ✅
+     - ✅
+   * - GPU
+     - ❌
+     - ❌
+     - ❌
+     - ❌
+
 |
 | **Supported Frameworks:**
 
@@ -21,3 +48,15 @@ tensordot
 
 .. |numpy_logo| image:: ../../../logos/supported/numpy_logo.png
    :target: https://numpy.org
+
+
+.. toctree::
+   :hidden:
+   :maxdepth: -1
+   :caption: tensordot
+
+   tensordot/tensordot_functional.rst
+   tensordot/static_tensordot_container.rst
+   tensordot/tensordot_array.rst
+   tensordot/tensordot_container.rst
+

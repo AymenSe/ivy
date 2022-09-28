@@ -2,6 +2,29 @@ arrays_equal
 ============
 
 .. autofunction:: ivy.functional.ivy.general.arrays_equal
+
+.. autofunction:: ivy.array.array_methods.arrays_equal
+
+.. list-table:: Device Support
+   :widths: 20 20 20 20 20
+   :header-rows: 1
+
+   * - Device
+     - JAX
+     - NumPy
+     - TensorFlow
+     - PyTorch
+   * - CPU
+     - ✅
+     - ✅
+     - ✅
+     - ✅
+   * - GPU
+     - ❌
+     - ❌
+     - ❌
+     - ❌
+
 |
 | **Supported Frameworks:**
 
@@ -21,3 +44,13 @@ arrays_equal
 
 .. |numpy_logo| image:: ../../../logos/supported/numpy_logo.png
    :target: https://numpy.org
+
+
+.. toctree::
+   :hidden:
+   :maxdepth: -1
+   :caption: arrays_equal
+
+   arrays_equal/arrays_equal_functional.rst
+   arrays_equal/arrays_equal_array.rst
+

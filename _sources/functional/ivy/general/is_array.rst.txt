@@ -3,7 +3,32 @@ is_array
 
 .. autofunction:: ivy.functional.ivy.general.is_array
 
+.. autofunction:: ivy.array.array_methods.is_array
+
+.. autofunction:: ivy.container.container_methods.static_is_array
+
 .. autofunction:: ivy.container.container_methods.is_array
+
+.. list-table:: Device Support
+   :widths: 20 20 20 20 20
+   :header-rows: 1
+
+   * - Device
+     - JAX
+     - NumPy
+     - TensorFlow
+     - PyTorch
+   * - CPU
+     - ✅
+     - ✅
+     - ✅
+     - ✅
+   * - GPU
+     - ❌
+     - ❌
+     - ❌
+     - ❌
+
 |
 | **Supported Frameworks:**
 
@@ -23,3 +48,15 @@ is_array
 
 .. |numpy_logo| image:: ../../../logos/supported/numpy_logo.png
    :target: https://numpy.org
+
+
+.. toctree::
+   :hidden:
+   :maxdepth: -1
+   :caption: is_array
+
+   is_array/is_array_functional.rst
+   is_array/is_array_array.rst
+   is_array/is_array_container.rst
+   is_array/static_is_array_container.rst
+

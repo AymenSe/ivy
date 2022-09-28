@@ -2,6 +2,33 @@ argmax
 ======
 
 .. autofunction:: ivy.functional.ivy.searching.argmax
+
+.. autofunction:: ivy.array.array_methods.argmax
+
+.. autofunction:: ivy.container.container_methods.argmax
+
+.. autofunction:: ivy.container.container_methods.static_argmax
+
+.. list-table:: Device Support
+   :widths: 20 20 20 20 20
+   :header-rows: 1
+
+   * - Device
+     - JAX
+     - NumPy
+     - TensorFlow
+     - PyTorch
+   * - CPU
+     - ✅
+     - ✅
+     - ✅
+     - ✅
+   * - GPU
+     - ❌
+     - ❌
+     - ❌
+     - ❌
+
 |
 | **Supported Frameworks:**
 
@@ -21,3 +48,15 @@ argmax
 
 .. |numpy_logo| image:: ../../../logos/supported/numpy_logo.png
    :target: https://numpy.org
+
+
+.. toctree::
+   :hidden:
+   :maxdepth: -1
+   :caption: argmax
+
+   argmax/argmax_functional.rst
+   argmax/argmax_array.rst
+   argmax/argmax_container.rst
+   argmax/static_argmax_container.rst
+

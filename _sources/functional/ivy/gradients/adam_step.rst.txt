@@ -2,6 +2,31 @@ adam_step
 =========
 
 .. autofunction:: ivy.functional.ivy.gradients.adam_step
+
+.. autofunction:: ivy.array.array_methods.adam_step
+
+.. autofunction:: ivy.container.container_methods.adam_step
+
+.. list-table:: Device Support
+   :widths: 20 20 20 20 20
+   :header-rows: 1
+
+   * - Device
+     - JAX
+     - NumPy
+     - TensorFlow
+     - PyTorch
+   * - CPU
+     - ✅
+     - ✅
+     - ✅
+     - ✅
+   * - GPU
+     - ❌
+     - ❌
+     - ❌
+     - ❌
+
 |
 | **Supported Frameworks:**
 
@@ -21,3 +46,14 @@ adam_step
 
 .. |numpy_logo| image:: ../../../logos/supported/numpy_logo.png
    :target: https://numpy.org
+
+
+.. toctree::
+   :hidden:
+   :maxdepth: -1
+   :caption: adam_step
+
+   adam_step/adam_step_functional.rst
+   adam_step/adam_step_array.rst
+   adam_step/adam_step_container.rst
+

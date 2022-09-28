@@ -2,6 +2,33 @@ vector_norm
 ===========
 
 .. autofunction:: ivy.functional.ivy.linear_algebra.vector_norm
+
+.. autofunction:: ivy.array.array_methods.vector_norm
+
+.. autofunction:: ivy.container.container_methods.vector_norm
+
+.. autofunction:: ivy.container.container_methods.static_vector_norm
+
+.. list-table:: Device Support
+   :widths: 20 20 20 20 20
+   :header-rows: 1
+
+   * - Device
+     - JAX
+     - NumPy
+     - TensorFlow
+     - PyTorch
+   * - CPU
+     - ✅
+     - ✅
+     - ✅
+     - ✅
+   * - GPU
+     - ❌
+     - ❌
+     - ❌
+     - ❌
+
 |
 | **Supported Frameworks:**
 
@@ -21,3 +48,15 @@ vector_norm
 
 .. |numpy_logo| image:: ../../../logos/supported/numpy_logo.png
    :target: https://numpy.org
+
+
+.. toctree::
+   :hidden:
+   :maxdepth: -1
+   :caption: vector_norm
+
+   vector_norm/vector_norm_functional.rst
+   vector_norm/static_vector_norm_container.rst
+   vector_norm/vector_norm_array.rst
+   vector_norm/vector_norm_container.rst
+

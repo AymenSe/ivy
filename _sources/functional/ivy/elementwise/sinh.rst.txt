@@ -2,6 +2,33 @@ sinh
 ====
 
 .. autofunction:: ivy.functional.ivy.elementwise.sinh
+
+.. autofunction:: ivy.array.array_methods.sinh
+
+.. autofunction:: ivy.container.container_methods.static_sinh
+
+.. autofunction:: ivy.container.container_methods.sinh
+
+.. list-table:: Device Support
+   :widths: 20 20 20 20 20
+   :header-rows: 1
+
+   * - Device
+     - JAX
+     - NumPy
+     - TensorFlow
+     - PyTorch
+   * - CPU
+     - ✅
+     - ✅
+     - ✅
+     - ✅
+   * - GPU
+     - ❌
+     - ❌
+     - ❌
+     - ❌
+
 |
 | **Supported Frameworks:**
 
@@ -21,3 +48,15 @@ sinh
 
 .. |numpy_logo| image:: ../../../logos/supported/numpy_logo.png
    :target: https://numpy.org
+
+
+.. toctree::
+   :hidden:
+   :maxdepth: -1
+   :caption: sinh
+
+   sinh/sinh_functional.rst
+   sinh/sinh_array.rst
+   sinh/sinh_container.rst
+   sinh/static_sinh_container.rst
+

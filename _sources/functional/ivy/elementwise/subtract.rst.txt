@@ -3,7 +3,32 @@ subtract
 
 .. autofunction:: ivy.functional.ivy.elementwise.subtract
 
+.. autofunction:: ivy.array.array_methods.subtract
+
 .. autofunction:: ivy.container.container_methods.subtract
+
+.. autofunction:: ivy.container.container_methods.static_subtract
+
+.. list-table:: Device Support
+   :widths: 20 20 20 20 20
+   :header-rows: 1
+
+   * - Device
+     - JAX
+     - NumPy
+     - TensorFlow
+     - PyTorch
+   * - CPU
+     - ✅
+     - ✅
+     - ✅
+     - ✅
+   * - GPU
+     - ❌
+     - ❌
+     - ❌
+     - ❌
+
 |
 | **Supported Frameworks:**
 
@@ -23,3 +48,15 @@ subtract
 
 .. |numpy_logo| image:: ../../../logos/supported/numpy_logo.png
    :target: https://numpy.org
+
+
+.. toctree::
+   :hidden:
+   :maxdepth: -1
+   :caption: subtract
+
+   subtract/subtract_functional.rst
+   subtract/static_subtract_container.rst
+   subtract/subtract_array.rst
+   subtract/subtract_container.rst
+

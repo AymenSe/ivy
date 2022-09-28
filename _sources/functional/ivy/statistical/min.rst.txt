@@ -2,6 +2,31 @@ min
 ===
 
 .. autofunction:: ivy.functional.ivy.statistical.min
+
+.. autofunction:: ivy.array.array_methods.min
+
+.. autofunction:: ivy.container.container_methods.min
+
+.. list-table:: Device Support
+   :widths: 20 20 20 20 20
+   :header-rows: 1
+
+   * - Device
+     - JAX
+     - NumPy
+     - TensorFlow
+     - PyTorch
+   * - CPU
+     - ✅
+     - ✅
+     - ✅
+     - ✅
+   * - GPU
+     - ❌
+     - ❌
+     - ❌
+     - ❌
+
 |
 | **Supported Frameworks:**
 
@@ -21,3 +46,14 @@ min
 
 .. |numpy_logo| image:: ../../../logos/supported/numpy_logo.png
    :target: https://numpy.org
+
+
+.. toctree::
+   :hidden:
+   :maxdepth: -1
+   :caption: min
+
+   min/min_functional.rst
+   min/min_array.rst
+   min/min_container.rst
+
